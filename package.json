@@ -1,0 +1,8 @@
+{
+  "name": "css-reset",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Gerard Pastor",
+  "sass": "reset.css",
+  "style": "reset.css"
+}
