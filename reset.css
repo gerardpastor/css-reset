@@ -85,13 +85,29 @@ body {
   width: 100%;
   position: relative;
   overflow-x: hidden;
-  
+
   font-family: var(--font-family-base, sans-serif, Helvetica, Arial);
   font-size: var(--font-size-base, 1.6rem);
   line-height: var(--line-height-base, 1.2);
-  
-  color: var(--color, #000);
-  background: var(--background, #fff);
+  font-weight: var(--font-weight-normal);
+}
+
+body,
+[data-scheme] {
+  color: var(--scheme-color, #000);
+  background: var(--scheme-background, #fff);
+}
+
+:where([data-scheme="light"]) {
+  color-scheme: light;
+  --scheme-color: var(--scheme-light-color, #000);
+  --scheme-background: var(--scheme-light-background, #fff);
+}
+
+:where([data-scheme="dark"]) {
+  color-scheme: dark;
+  --scheme-color: var(--scheme-dark-color, #fff);
+  --scheme-background: var(--scheme-dark-background, #000);
 }
 
 body.no-scroll {
@@ -106,7 +122,7 @@ img {
 
 i,
 em {
-  font-style: italic;
+  font-style: var(--font-style-italic, italic);
 }
 
 b,
